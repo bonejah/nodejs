@@ -18,4 +18,13 @@
 • npm adduser nome_do_usuário: cria uma conta no npm, através do site (https://npmjs.org) .
 • npm whoami: exibe detalhes do seu perfil público npm (é necessário criar uma conta antes).
 • npm publish: publica um módulo no site do npm, é necessário ter uma conta antes.
-``
+```
+## Modules
+```
+Connect (https://github.com/senchalabs/connect)
+Express (http://expressjs.com)
+Geddy (http://geddyjs.org)
+CompoundJS (http:compoundjs.com)
+Sails (http://balderdashy.github.io/sails)
+```
+
