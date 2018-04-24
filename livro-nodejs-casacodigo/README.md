@@ -28,3 +28,21 @@ CompoundJS (http:compoundjs.com)
 Sails (http://balderdashy.github.io/sails)
 ```
 
+ * http://expressjs.com
+ ````
+ npm install express-generator -g
+ 
+ Ele possui as seguintes características:
+• MVR(Model-View-Routes);
+• MVC(Model-View-Controller);
+• Roteamentodeurlsviacallbacks;
+• Middleware;
+• InterfaceRESTFul;
+• SuporteaFileUploads;
+• Con guraçãobaseadoemvariáveisdeambiente; • Suporteahelpersdinâmicos;
+• IntegraçãocomTemplateEngines;
+• IntegraçãocomSQLeNoSQL;
+```
+
+
+
