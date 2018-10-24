@@ -37,3 +37,31 @@ save-exact = true
 ```
 - https://editorconfig.org/
 ```
+
+## MongoDB
+
+### Local Installation
+
+```
+https://docs.mongodb.com/manual/administration/install-on-linux/
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+```
+
+### Remote Installation
+
+```
+https://mlab.com/signup/
+```
+
+## Nodemon (Deploy automatic)
+
+- https://nodemon.io/
+
+## Winston (Lib for logs)
+
+- https://github.com/winstonjs/winston
+
+## Dotenv (Ferramenta que carrega variaveis de ambiente dinamicamente no arquivo .env)
+
+- https://www.npmjs.com/package/dotenv
