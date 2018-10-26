@@ -19,16 +19,16 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier: install Prettie
 
 
 File .npmrc
-# Bloqueia o package
+# Block the package
 package-lock = false
 
-# Desabilitado por problemas de performance no Windows
+# Disable due to performance issues in Windows
 progress = false
 
-# Configuração do endereço do repositório que deverá ser utilizado para instalar as dependência
+# Configuration of the repository address that should be used to install the dependencies
 registry = https://registry.npmjs.org
 
-# Instruir o npm a instalar a versão exata do pacote que foi solicitado
+# Instruct npm to install the exact version of the package that was requested
 save-exact = true
 ```
 
@@ -62,44 +62,42 @@ https://mlab.com/signup/
 
 - https://github.com/winstonjs/winston
 
-## Dotenv (Ferramenta que carrega variaveis de ambiente dinamicamente no arquivo .env)
+## Dotenv (Tool that dynamically loads environmentvariables in the .env file)
 
 - https://www.npmjs.com/package/dotenv
 
-## Mongoose (Lib de modelagem de dados que integra o MongoDB ao Nodejs)
+## Mongoose (Lib data modeling that integrates MongoDM with Nodejs)
 
 - https://mongoosejs.com/
 
-## Express (framework de aplicação que disponibiliza um servidor Web, além de fornecer um conjunto de recursos necessários para a criação de uma API robusta)
+## Express (Application framework that provides a Web Server, as well as providing a set of resources necessary to create a robust API)
 
 - https://expressjs.com/
 
-## Helmet (middleware de segurança que ajuda a proteger o Express, fazendo ajustes nos cabeçalhos HTTP)
+## Helmet (Security middleware that helps protect Express by making adjustments to HTTP headers)
 
 - https://helmetjs.github.io/
 
-## CORS (CORS é o acrônimo para Cross-Origin Resource Sharing que significa Compartilhamento de Recursos de Origem Cruzada. CORS é uma especificação que define quais e como os recursos de um servidor podem ser acessados. Devemos configurar o CORS para elevar o nível de segurança da API)
+## CORS (CORS is acronym fir Cross-Origin Resources Sharing wich stands for Cross-Source Resource Sharing. Cors is a specification that defines what and how the resources of a server can be accessed. We should configure Cors to raise the API security level)
 
 - npm i @robertoachar/express-cors
 
-## Compression (middleware de desempenho que auxilia o Express a comprimir os dados que são trafegados. O compression suporta deflate e gzip.
+## Compression (Performance middleware that helps Express compress the data that is trafficjked. The compression supports deflate and gzip)
 
 - https://github.com/expressjs/compression
 
-## body-parser (Middleware de utilidades, ele analisa (parse) a requisição antes de chegar nas rotas e disponibiliza o objeto req.body com os dados que foram enviados através das requisições. Ele suporta application/json e application/x-www-form-urlencoded)
+## body-parser (Utilities Middleware, it parses the request before arriving on the routes and provides the req.body object with the data was sent throught the requests.It supports application/json and application/x-www-form-urlenconded)
 
 - https://github.com/expressjs/body-parser
 
-## Status HTTP
+## HTTP Status
 
 - https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 
 ```
-200-299 - Respostas de sucesso
-400-499 - Respostas de erro do Cliente
-500-599 - Respostas de erro do Servidor
+200-299 - Successful Answers
+400-499 - Customer Error Responses
+500-599 - Server Error Responses
 ```
 
-## Healthz (É uma técnica de monitoramento muito utilizada pelo time de DevOps. Ela consiste em verificar periodicamente a "saúde" (health) da aplicação)
-
-
+## Healthz (It is a monitoring technique widely used by the DevOps team. It consists of periodically checking the health of the application)
