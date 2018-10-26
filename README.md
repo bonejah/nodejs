@@ -65,3 +65,41 @@ https://mlab.com/signup/
 ## Dotenv (Ferramenta que carrega variaveis de ambiente dinamicamente no arquivo .env)
 
 - https://www.npmjs.com/package/dotenv
+
+## Mongoose (Lib de modelagem de dados que integra o MongoDB ao Nodejs)
+
+- https://mongoosejs.com/
+
+## Express (framework de aplicação que disponibiliza um servidor Web, além de fornecer um conjunto de recursos necessários para a criação de uma API robusta)
+
+- https://expressjs.com/
+
+## Helmet (middleware de segurança que ajuda a proteger o Express, fazendo ajustes nos cabeçalhos HTTP)
+
+- https://helmetjs.github.io/
+
+## CORS (CORS é o acrônimo para Cross-Origin Resource Sharing que significa Compartilhamento de Recursos de Origem Cruzada. CORS é uma especificação que define quais e como os recursos de um servidor podem ser acessados. Devemos configurar o CORS para elevar o nível de segurança da API)
+
+- npm i @robertoachar/express-cors
+
+## Compression (middleware de desempenho que auxilia o Express a comprimir os dados que são trafegados. O compression suporta deflate e gzip.
+
+- https://github.com/expressjs/compression
+
+## body-parser (Middleware de utilidades, ele analisa (parse) a requisição antes de chegar nas rotas e disponibiliza o objeto req.body com os dados que foram enviados através das requisições. Ele suporta application/json e application/x-www-form-urlencoded)
+
+- https://github.com/expressjs/body-parser
+
+## Status HTTP
+
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+```
+200-299 - Respostas de sucesso
+400-499 - Respostas de erro do Cliente
+500-599 - Respostas de erro do Servidor
+```
+
+## Healthz (É uma técnica de monitoramento muito utilizada pelo time de DevOps. Ela consiste em verificar periodicamente a "saúde" (health) da aplicação)
+
+
