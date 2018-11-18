@@ -32,7 +32,12 @@ const schema = new Schema({
   tags: [{
     type: String,
     required: [true, 'As tags são obrigatórias']
-  }]
+  }],
+  image: {
+    type: String,
+    required: true,
+    trim: true
+  }
 })
 
 

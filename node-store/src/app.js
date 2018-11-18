@@ -16,7 +16,7 @@ const customerRoute = require('./routes/customer-route')
 const orderRoute = require('./routes/order-route')
 
 const app = express()
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '50mb' }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/', indexRoute)
 app.use('/products', productRoute)
