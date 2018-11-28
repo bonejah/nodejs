@@ -16,6 +16,7 @@ let config = {
   },
   plugins: [
     new CleanWebpackPlugin(['public']),
+    new DashboardPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       minify: false
