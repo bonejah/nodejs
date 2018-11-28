@@ -1,16 +1,39 @@
-function generateComponent() {
-    const element__ = document.createElement('DIV');
-    element__.className = 'container';
+import './base.scss';
+import MyImg from './assets/images/sky.jpg'
 
-    const paragraph = document.createElement('P');
-    const txt = document.createTextNode('This is a tutorial envolving Webpack');
+class Generator {
 
-    paragraph.appendChild(txt);
-    element__.appendChild(paragraph);
+    createParagraph(__string) {
+        const textNode = document.createTextNode(__string);
+        const paragraphElement = document.createElement('P');
+        paragraphElement.appendChild(textNode);
+        return paragraphElement;
+    }
 
-    console.log('My Javascript Log.');
+    createImg(__source, __width, __height) {
+        const imgElement = new Image(__width, __height);
+        imgElement.src = __source;
+        return imgElement;
+    }
 
-    return element__;
+    createDiv(__innerNode) {
+        const divElement = document.createElement('DIV');
+
+        if (__innerNode) {
+            divElement.appendChild(__innerNode);
+        }
+
+        return divElement;
+    }
 }
 
-document.body.appendChild(generateComponent())
+const gen = new Generator;
+const par = gen.createParagraph('This is a tutorial envolving Webpack - Part 2');
+const myImg = gen.createImg(MyImg, 250, 400);
+const div = gen.createDiv(par);
+
+div.appendChild(myImg);
+console.log('This is my image address', MyImg);
+
+
+document.body.appendChild(div);

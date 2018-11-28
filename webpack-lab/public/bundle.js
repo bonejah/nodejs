@@ -86,24 +86,80 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function generateComponent() {
-    const element__ = document.createElement('DIV');
-    element__.className = 'container';
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _base_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _base_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_base_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_images_sky_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _assets_images_sky_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images_sky_jpg__WEBPACK_IMPORTED_MODULE_1__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    const paragraph = document.createElement('P');
-    const txt = document.createTextNode('This is a tutorial envolving Webpack');
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-    paragraph.appendChild(txt);
-    element__.appendChild(paragraph);
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-    console.log('My Javascript Log.');
 
-    return element__;
-}
 
-document.body.appendChild(generateComponent())
+
+var Generator =
+/*#__PURE__*/
+function () {
+  function Generator() {
+    _classCallCheck(this, Generator);
+  }
+
+  _createClass(Generator, [{
+    key: "createParagraph",
+    value: function createParagraph(__string) {
+      var textNode = document.createTextNode(__string);
+      var paragraphElement = document.createElement('P');
+      paragraphElement.appendChild(textNode);
+      return paragraphElement;
+    }
+  }, {
+    key: "createImg",
+    value: function createImg(__source, __width, __height) {
+      var imgElement = new Image(__width, __height);
+      imgElement.src = __source;
+      return imgElement;
+    }
+  }, {
+    key: "createDiv",
+    value: function createDiv(__innerNode) {
+      var divElement = document.createElement('DIV');
+
+      if (__innerNode) {
+        divElement.appendChild(__innerNode);
+      }
+
+      return divElement;
+    }
+  }]);
+
+  return Generator;
+}();
+
+var gen = new Generator();
+var par = gen.createParagraph('This is a tutorial envolving Webpack - Part 2');
+var myImg = gen.createImg(_assets_images_sky_jpg__WEBPACK_IMPORTED_MODULE_1___default.a, 250, 400);
+var div = gen.createDiv(par);
+div.appendChild(myImg);
+console.log('This is my image address', _assets_images_sky_jpg__WEBPACK_IMPORTED_MODULE_1___default.a);
+document.body.appendChild(div);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/sky.jpg";
 
 /***/ })
 /******/ ]);
