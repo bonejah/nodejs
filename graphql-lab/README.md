@@ -1,0 +1,1 @@
+https://medium.com/@__InDev/graphql-parte-1-ab6b5cfd083c
