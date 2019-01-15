@@ -13,9 +13,11 @@ const DEFAULT_ITEM_ATUALIZAR = {
   id: 2
 }
 
+
 describe('Suite de manipulacao de herois', () => {
   before(async () => {
     await database.cadastrar(DEFAULT_ITEM_CADASTRAR)
+    await database.cadastrar(DEFAULT_ITEM_ATUALIZAR)
   })
 
   it('deve pesquisar um heroi usando arquivos', async () => {
@@ -37,13 +39,20 @@ describe('Suite de manipulacao de herois', () => {
     deepEqual(resultado, expected)
   })
 
+
   it('deve atualizar um heroi por id', async () => {
     const expected = {
       ...DEFAULT_ITEM_ATUALIZAR,
       nome: 'Batman',
       poder: 'Inteligencia'
     }
-    const resultado = 
+    const novoDado = {
+      nome: 'Batman',
+      poder: 'Inteligencia'
+    }
+    await database.atualizar(DEFAULT_ITEM_ATUALIZAR.id, novoDado)
+    const [resultado] = await database.listar(DEFAULT_ITEM_ATUALIZAR.id)
+    deepEqual(resultado, expected)
   })
 
 })
