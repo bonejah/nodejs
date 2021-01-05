@@ -4,14 +4,12 @@ const { ok } = require('assert')
 
 const env = process.env.NODE_ENV || "dev"
 console.log('ENV', env)
-ok(env === "prod" || env === "dev", "env value is invalid!!")
+ok(env === "prod" || env === "dev", `env value is invalid!! --> env = ${env}`)
 
 const configPath = join(__dirname, '../config', `.env.${env}`)
 console.log('CONFIGPATH>>>', configPath)
 
 config({path: configPath })
-
-
 
 const Hapi = require('hapi')
 const HapiSwagger = require('hapi-swagger')
@@ -25,6 +23,7 @@ const UserSchema = require('./db/postgres/schemas/userSchema')
 const HeroSchema = require('./db/mongodb/schemas/heroesSchema')
 const HeroRoutes = require('./routes/heroRoutes')
 const AuthRoutes = require('./routes/authRoutes')
+const CoverageRoutes = require('./routes/coverageRoutes')
 
 const app = new Hapi.Server({
   port: process.env.PORT
@@ -90,6 +89,7 @@ async function main() {
   app.route([
     ...mapRoutes(new HeroRoutes(context), HeroRoutes.methods()),
     ...mapRoutes(new AuthRoutes(JWT_SECRET, contextPostgres), AuthRoutes.methods()),
+    ...mapRoutes(new CoverageRoutes(), CoverageRoutes.methods()),
   ])
 
   await app.start()

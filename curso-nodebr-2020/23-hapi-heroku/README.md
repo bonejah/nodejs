@@ -41,3 +41,10 @@ docker run \
  docker exec -it mongodb \
   mongo --host localhost -u admin -p admin --authenticationDatabase admin \
   --eval "db.getSiblingDB('heroes').createUser({user: 'bonejah', pwd: '123456', roles: [{role: 'readWrite', db: 'heroes'}] })" 
+
+# Commands PM2
+pm2 start --name heroes -i 10 src/api.js
+pm2 monit
+pm2 logs
+pm2 kill
+

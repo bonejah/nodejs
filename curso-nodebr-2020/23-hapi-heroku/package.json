@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/*.js",
+    "preinstall": "npm i -g pm2",
+    "postinstall": "cross-env NODE_ENV=prod npm run test:prod",
+    "test": "nyc --reporter=html mocha --timeout 10000 --exit tests/*.js",
     "test:watch": "mocha tests/*.js -w",
     "test:dev": "cross-env  NODE_ENV=dev npm t",
     "test:prod": "cross-env NODE_ENV=prod npm t",
-    "prod": "cross-env NODE_ENV=prod node src/api.js"
+    "prod": "cross-env NODE_ENV=prod pm2-runtime src/api.js"
   },
   "keywords": [],
   "author": "",
@@ -28,11 +30,13 @@
     "npm": "^6.14.10",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
+    "pm2": "^4.5.1",
     "sequelize": "^6.3.5",
     "t": "^0.5.1",
     "vision": "^5.4.3"
   },
   "devDependencies": {
-    "mocha": "^8.2.1"
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
   }
 }
